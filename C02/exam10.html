@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Online Exam</title>
+  </head>
+  <body>
+    <h1>Online Exam</h1>
+    <div id="questions">
+      <h2>Question 1</h2>
+      <p>What is the capital of France?</p>
+      <input type="radio" name="q1" value="a">a. Paris<br>
+      <input type="radio" name="q1" value="b">b. London<br>
+      <input type="radio" name="q1" value="c">c. Madrid<br>
+      <br>
+      <h2>Question 2</h2>
+      <p>What is the largest planet in our solar system?</p>
+      <input type="radio" name="q2" value="a">a. Earth<br>
+      <input type="radio" name="q2" value="b">b. Mars<br>
+      <input type="radio" name="q2" value="c">c. Jupiter<br>
+      <br>
+      <h2>Question 3</h2>
+      <p>What is the color of an emerald?</p>
+      <input type="radio" name="q3" value="a">a. Green<br>
+      <input type="radio" name="q3" value="b">b. Red<br>
+      <input type="radio" name="q3" value="c">c. Blue<br>
+      <br>
+    </div>
+    <button onclick="submitExam()">Submit Exam</button>
+    <script>
+      function submitExam() {
+        // Retrieve user's answers
+        var answer1 = document.querySelector('input[name="q1"]:checked').value;
+        var answer2 = document.querySelector('input[name="q2"]:checked').value;
+        var answer3 = document.querySelector('input[name="q3"]:checked').value;
+        
+        // Check if all questions have been answered
+        if (!answer1 || !answer2 || !answer3) {
+          alert("Please answer all questions!");
+          return;
+        }
+        
+        // Grade exam
+        var numCorrect = 0;
+        if (answer1 === "a") {
+          numCorrect++;
+        }
+        if (answer2 === "c") {
+          numCorrect++;
+        }
+        if (answer3 === "a") {
+          numCorrect++;
+        }
+        
+        // Display results
+        alert("You got " + numCorrect + " out of 3 questions correct!");
+      }
+    </script>
+  </body>
+</html>
