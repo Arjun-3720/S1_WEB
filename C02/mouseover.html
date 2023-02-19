@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mouse Over Example</title>
+  </head>
+  <body>
+    <div id="content" onmouseover="changeContent()">
+      <h1>Mouse Over Example</h1>
+      <img src="C:\Users\arjun\OneDrive\Documents\my pic.jpeg" alt="New Image">
+      <p>Hover over this text to see a new image and text.</p>
+    </div>
+    <div id="newContent" style="display: none;">
+      <img src="C:\Users\arjun\OneDrive\Documents\Intro to Discord.jpeg" alt="New Image">
+      <p>This is the new content that appears when you hover over the old content.</p>
+    </div>
+    <script>
+      function changeContent() {
+        // Get references to the old and new content elements
+        const content = document.getElementById("content");
+        const newContent = document.getElementById("newContent");
+
+        // Hide the old content and show the new content
+        content.style.display = "none";
+        newContent.style.display = "block";
+      }
+    </script>
+  </body>
+</html>
