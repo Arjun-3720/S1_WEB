@@ -24,7 +24,7 @@
 
 </form>
 
- //php code
+ // php code
  
 <?php
 // Database credentials
